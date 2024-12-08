@@ -67,6 +67,14 @@ void AFirstCharacter::MoveForward(float value)
 
 void AFirstCharacter::MoveRight(float value)
 {
-	AddMovementInput(GetActorRightVector(), value);
+	// Make the forward be the direction of the camera.
+	FRotator ControlRot = GetControlRotation();
+	// Force the rotator to not go up nor down
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+
+	FVector RightVector = FRotationMatrix(ControlRot).GetScaledAxis(EAxis::Y);
+	
+	AddMovementInput(RightVector, value);
 }
 

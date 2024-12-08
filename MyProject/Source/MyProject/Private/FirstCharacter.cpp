@@ -34,16 +34,6 @@ void AFirstCharacter::BeginPlay()
 	
 }
 
-void AFirstCharacter::MoveForward(float value)
-{
-	AddMovementInput(GetActorForwardVector(), value);
-}
-
-void AFirstCharacter::MoveRight(float value)
-{
-	AddMovementInput(GetActorRightVector(), value);
-}
-
 // Called every frame
 void AFirstCharacter::Tick(float DeltaTime)
 {
@@ -62,5 +52,21 @@ void AFirstCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
+}
+
+void AFirstCharacter::MoveForward(float value)
+{
+	// Make the forward be the direction of the camera.
+	FRotator ControlRot = GetControlRotation();
+	// Force the rotator to not go up nor down
+	ControlRot.Pitch = 0.0f;
+	ControlRot.Roll = 0.0f;
+
+	AddMovementInput(ControlRot.Vector(), value);
+}
+
+void AFirstCharacter::MoveRight(float value)
+{
+	AddMovementInput(GetActorRightVector(), value);
 }
 

@@ -9,11 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2755b715-2933-47b7-8eaa-61e2a624a4df" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MyProject.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MyProject.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEditor.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEditor.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blueprints/PlayerCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Blueprints/PlayerCharacter.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/MyProject/Private/FirstCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MyProject/Private/FirstCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/MyProject/Public/FirstCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/MyProject/Public/FirstCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +140,7 @@
       <workItem from="1733666139049" duration="797000" />
       <workItem from="1733666968541" duration="40000" />
       <workItem from="1733667158537" duration="800000" />
-      <workItem from="1733669582496" duration="6455000" />
+      <workItem from="1733669582496" duration="9348000" />
     </task>
     <servers />
   </component>

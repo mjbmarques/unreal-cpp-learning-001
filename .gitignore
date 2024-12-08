@@ -76,3 +76,5 @@ MyProject/DerivedDataCache/*
 # Starter Content and heavy assets
 MyProject/Content/StarterContent
 MyProject/Content/Assets
+MyProject/Content/ControlRig
+MyProject/Content/Paragon*

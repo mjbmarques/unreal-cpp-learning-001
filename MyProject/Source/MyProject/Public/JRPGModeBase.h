@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "BaseUnitCharacter.h"
 #include "GameFramework/GameModeBase.h"
 #include "JRPGModeBase.generated.h"
 
@@ -15,6 +16,24 @@ class MYPROJECT_API AJRPGModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
-	virtual void TurnRequest();
+
+	AJRPGModeBase();
 	
+	UFUNCTION(BlueprintNativeEvent)
+	void TurnRequest(ABaseUnitCharacter* Character);
+
+	UFUNCTION(BlueprintNativeEvent)
+	void StartTurn();
+
+	UPROPERTY(EditAnywhere)
+	ABaseUnitCharacter* BaseUnitCharacter;
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<ABaseUnitCharacter*> TurnOrder;
+
+	UPROPERTY(EditAnywhere)
+	bool bOngoingTurn;
+
+private:
+
 };

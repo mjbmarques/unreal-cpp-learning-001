@@ -3,14 +3,15 @@
 
 #include "CombatActorComponent.h"
 
+#include "BaseUnitCharacter.h"
+
 // Sets default values for this component's properties
 UCombatActorComponent::UCombatActorComponent()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
+	
 }
 
 
@@ -19,7 +20,8 @@ void UCombatActorComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	Character = Cast<ABaseUnitCharacter>(GetOwner());
+	BattlePosition = Character->GetTransform();
 	
 }
 
@@ -30,5 +32,17 @@ void UCombatActorComponent::TickComponent(float DeltaTime, ELevelTick TickType, 
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+}
+
+void UCombatActorComponent::StartUnitTurn()
+{
+}
+
+void UCombatActorComponent::EndUnitTurn()
+{
+}
+
+void UCombatActorComponent::BeginBattle()
+{
 }
 
